@@ -61,7 +61,7 @@ body {
   position: absolute;
   left: 0;
   overflow: scroll;
-  padding: 50px;
+  padding: 70px;
   background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGElEQVQYlWNgYGCQwoKxgqGgcJA5h3yFAAs8BRWVSwooAAAAAElFTkSuQmCC); 
 }
 
@@ -73,7 +73,6 @@ body {
   right: 0;
   border-left: 1px solid rgba(1, 1, 1, 0.18);
   padding: 43px 0;
-  
 
   section {
     padding: 50px;
@@ -107,6 +106,10 @@ body {
         margin: 0;
         text-align: center;
         font-family: 'work_sansregular';
+
+        span {
+          color: #444;
+        }
       }
     }
   }
@@ -167,6 +170,10 @@ h3, label {
   color: #C4C7C6;
   font-family: 'work_sanslight';
   text-align: left;
+
+  span {
+    color: #818483;
+  }
 }
 
 h3 {
@@ -181,7 +188,6 @@ label {
 
 #armadillo {
   border: 1px solid #25DAA5;
-  background-color: rgba(37,218, 165, .08);
-
+  background-color: rgba(37,218, 165, .05);
   fill: #25DAA5;
 }
