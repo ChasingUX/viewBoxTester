@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   var $svg = $('svg')[0],
+     $svgG = $('svg g')[0],
      $box = $svg.getAttribute('viewBox'),
      $currentViewBox = $box.split(/\s+|,/),
      vbX = $currentViewBox[0],
@@ -32,7 +33,17 @@ $(document).ready(function() {
       }
 
       $svg.setAttribute('viewBox', vbX + ' ' + vbY + ' ' + vbWidth + ' ' + vbHeight); 
-      $vbReport.text("[ " + vbX + ' ' + vbY + ' ' + vbWidth + ' ' + vbHeight +" ]")
+      $vbReport.text("[ " + vbX + ' ' + vbY + ' ' + vbWidth + ' ' + vbHeight +" ]");
+
+      var vbBox = $svgG.getBoundingClientRect();
+
+      $(".box").css({
+        // 'top' : vbBox.top,
+        // 'left' : vbBox.left,
+        'height' : vbBox.height,
+        'width' : vbBox.width,
+      });
+
     },
   }).slider("pips", {
     first: "pip",
@@ -50,6 +61,14 @@ $(document).ready(function() {
   $heightIndicator.text(vbHeight + " units");
   $vbReport.text("[ " + vbX + ' ' + vbY + ' ' + vbWidth + ' ' + vbHeight +" ]");
 
+  var vbBox = $svgG.getBoundingClientRect();
+
+  $(".box").css({
+    // 'top' : vbBox.top,
+    // 'left' : vbBox.left,
+    'height' : vbBox.height,
+    'width' : vbBox.width,
+  });
 
   //EVENTS
   $($numInput).on('keydown', function(e){
@@ -88,6 +107,15 @@ $(document).ready(function() {
       //set the position of the svg viewBox
       $svg.setAttribute('viewBox', vbX + ' ' + vbY + ' ' + vbWidth + ' ' + vbHeight); 
       $vbReport.text("[ " + vbX + ' ' + vbY + ' ' + vbWidth + ' ' + vbHeight +" ]");
+
+      var vbBox = $svgG.getBoundingClientRect();
+
+      $(".box").css({
+        // 'top' : vbBox.top,
+        // 'left' : vbBox.left,
+        'height' : vbBox.height,
+        'width' : vbBox.width,
+      });
 
     } else {
       e.preventDefault();
