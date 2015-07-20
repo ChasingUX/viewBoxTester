@@ -61,6 +61,14 @@ $(document).ready(function() {
   $heightIndicator.text(vbHeight + " units");
   $vbReport.text("[ " + vbX + ' ' + vbY + ' ' + vbWidth + ' ' + vbHeight +" ]");
 
+  var vbBox = $svgG.getBoundingClientRect();
+
+  $(".box").css({
+    // 'top' : vbBox.top,
+    // 'left' : vbBox.left,
+    'height' : vbBox.height,
+    'width' : vbBox.width,
+  });
 
   //EVENTS
   $($numInput).on('keydown', function(e){
