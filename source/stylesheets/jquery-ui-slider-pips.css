@@ -1,0 +1,215 @@
+/* HORIZONTAL */
+
+/* increase bottom margin to fit the pips */
+.ui-slider-horizontal.ui-slider-pips { 
+    margin-bottom: 1.4em; 
+}
+
+.ui-slider-pips .ui-slider-label,
+.ui-slider-pips .ui-slider-pip-hide { 
+    display: none; 
+}
+
+.ui-slider-pips .ui-slider-pip-label .ui-slider-label { 
+    display: block; 
+}
+
+.ui-slider-pips .ui-slider-pip { 
+    width: 2em;
+    height: 1em;
+    line-height: 1em;
+    position: absolute;
+    font-size: 0.8em;
+    color: #999;
+    overflow: visible;
+    text-align: center;
+    top: 20px;
+    left: 20px;
+    margin-left: -1em;
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.ui-state-disabled.ui-slider-pips .ui-slider-pip {
+    cursor: default;
+}
+
+/* little pip/line position & size */
+.ui-slider-pips .ui-slider-line {
+    background: #999;
+    width: 1px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+}
+
+/* the text label postion & size */
+/* it overflows so no need for width to be accurate */
+.ui-slider-pips .ui-slider-label {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -1em;
+    width: 2em;
+}
+
+/* VERTICAL */
+
+.ui-slider-vertical.ui-slider-pips {
+    margin-bottom: 1em;
+    margin-right: 2em;
+}
+
+.ui-slider-vertical.ui-slider-pips .ui-slider-pip {
+    text-align: left;
+    top: auto;
+    left: 20px;
+    margin-left: 0;
+    margin-bottom: -0.5em;
+}
+
+/* vertical line/pip should be horizontal instead */
+.ui-slider-vertical.ui-slider-pips .ui-slider-line {
+    width: 3px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+
+[class*=flat-slider].ui-slider
+{
+  background: #e8e2d3;
+  border: none;
+  border-radius: 0;
+}
+[class*=flat-slider].ui-slider .ui-slider-handle
+{
+  border-color: transparent;
+  border-radius: 50% 50% 0;
+  height: 30px;
+  transition: border .4s ease;
+  width: 30px;
+  transform: rotateZ(45deg);
+}
+
+[class*=flat-slider].ui-slider .ui-slider-handle:hover {
+  cursor: pointer;
+}
+
+[class*=flat-slider].ui-slider .ui-slider-handle .ui-slider-tip {
+  transform: rotateZ(-45deg);
+  margin: 2px 0 0 3px;
+  display: block;
+}
+
+[class*=flat-slider].ui-slider .ui-slider-pip .ui-slider-line
+{
+  background: #e8e2d3;
+  transition: all .4s ease;
+}
+[class*=flat-slider].ui-slider.ui-slider-horizontal
+{
+  height: 6px;
+}
+[class*=flat-slider].ui-slider.ui-slider-horizontal .ui-slider-handle
+{
+  margin-left: -15px;
+  top: -39px;
+  color: #FFF;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+}
+[class*=flat-slider].ui-slider.ui-slider-horizontal .ui-slider-pip
+{
+  top: 10px;
+}
+[class*=flat-slider].ui-slider.ui-slider-horizontal .ui-slider-pip .ui-slider-line
+{
+  height: 10px;
+  margin-left: -1px;
+  width: 2px;
+}
+[class*=flat-slider].ui-slider.ui-slider-horizontal .ui-slider-pip[class*=ui-slider-pip-selected] .ui-slider-line
+{
+  height: 20px;
+}
+[class*=flat-slider].ui-slider.ui-slider-horizontal .ui-slider-pip.ui-slider-pip-inrange .ui-slider-line
+{
+  height: 12px;
+}
+[class*=flat-slider].ui-slider.ui-slider-vertical
+{
+  display: inline-block;
+  height: 125px;
+  margin: 0 15%;
+  width: 6px;
+}
+[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-handle
+{
+  left: -25px;
+  margin-bottom: -10px;
+  transform: rotateZ(-45deg);
+  webkit-transform: rotateZ(-45deg);
+}
+[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-pip
+{
+  left: 10px;
+}
+[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-pip .ui-slider-line
+{
+  height: 2px;
+  margin-top: -1px;
+  width: 10px;
+}
+[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-pip[class*=ui-slider-pip-selected] .ui-slider-line
+{
+  width: 20px;
+}
+[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-pip.ui-slider-pip-inrange .ui-slider-line
+{
+  width: 12px;
+}
+[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-handle .ui-slider-tip,[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-handle[class*=ui-state-] .ui-slider-tip
+{
+    background: 0 0;
+  border: none;
+  color: #FFF;
+  opacity: 1;
+  text-align: center;
+  top: 0;
+  transform: rotateZ(45deg);
+  visibility: visible;
+  webkit-transform: rotateZ(45deg);
+  width: auto;
+  line-height: 20px;
+  font-size: 12px;
+  margin: 0;
+  left: 0;
+}
+[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-handle .ui-slider-tip:before,[class*=flat-slider].ui-slider.ui-slider-vertical .ui-slider-handle[class*=ui-state-] .ui-slider-tip:before
+{
+  display: none;
+}
+.flat-slider .ui-slider-handle,.flat-slider .ui-slider-pip.ui-slider-pip-inrange .ui-slider-line,.flat-slider .ui-slider-pip[class*=ui-slider-pip-selected] .ui-slider-line,.flat-slider .ui-slider-range
+{
+  background-color: #25daa5;
+  outline: 0;
+}
+
+/*.flat-slider .ui-slider-handle:focus,.flat-slider .ui-slider-pip.ui-slider-pip-inrange .ui-slider-line:focus,.flat-slider .ui-slider-pip[class*=ui-slider-pip-selected] .ui-slider-line:focus,.flat-slider .ui-slider-range:focus {
+  background-color: #16C592;
+}*/
+
+.flat-slider-vertical-2 .ui-slider-handle,.flat-slider-vertical-2 .ui-slider-pip.ui-slider-pip-inrange .ui-slider-line,.flat-slider-vertical-2 .ui-slider-pip[class*=ui-slider-pip-selected] .ui-slider-line,.flat-slider-vertical-2 .ui-slider-range
+{
+  background-color: #bd77f2;
+  outline: 0;
+}
